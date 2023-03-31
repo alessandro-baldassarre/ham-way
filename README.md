@@ -1,3 +1,3 @@
 # ham-way
 
-[hamway](https://ham-way.netlify.app/)
+go to the site -> [hamway](https://ham-way.netlify.app/)
