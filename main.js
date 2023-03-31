@@ -34,6 +34,31 @@ const scrollHeader = () => {
 
 window.addEventListener("scroll", scrollHeader)
 
+// ~~~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK~~~~~~~~~~
+const activeLink = () => {
+    const sections = document.querySelectorAll("section")
+    const navLinks = document.querySelectorAll(".nav__link")
+
+    let current = "home"
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop
+
+        if (this.scrollY >= sectionTop - 60) {
+            current = section.getAttribute("id")
+        }
+    })
+
+    navLinks.forEach(link => {
+        link.classList.remove("active-link")
+        if (link.href.includes(current)) {
+            link.classList.add("active-link")
+        }
+    })
+}
+
+window.addEventListener("scroll", activeLink)
+
 // ~~~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~~~~~~~~
 const scrollUp = () => {
     const scrollUp = document.getElementById("scroll-up")
